@@ -1,0 +1,199 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+  border-bottom: 5px solid #77d42a;
+}
+
+header .logo {
+  float: left;
+}
+
+header nav {
+  float: right;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+#hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Make the hero section full viewport height */
+  overflow: hidden;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the container while maintaining aspect ratio */
+  z-index: -1;
+}
+
+#hero .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+}
+
+#hero .content h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+#hero .content p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+#hero .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #77d42a;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+section {
+  padding: 40px 0;
+  text-align: center;
+}
+
+section#about {
+  background: #eaeaea;
+}
+
+section#activities {
+  background: #ae31e7;
+}
+
+section#activities .activity {
+  margin: 20px 0;
+  text-align: left;
+}
+
+section#activities .activity img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 10%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image covers the circular area */
+  width: 400px; /* Set a fixed width */
+  height: 300px; /* Set a fixed height */
+}
+
+section#staff {
+  background: #ad8502;
+}
+
+section#staff .staff-member {
+  display: inline-block;
+  width: 30%;
+  margin: 0 1.5%;
+  vertical-align: top;
+  text-align: center;
+}
+
+section#staff .staff-member img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover; /* Ensures the image covers the entire container while maintaining aspect ratio */
+}
+
+section#staff .staff-member h3 {
+  margin: 10px 0 5px;
+}
+
+section#staff .staff-member p {
+  margin: 0;
+}
+
+section#contact {
+  background: #fff;
+}
+
+section#contact .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #77d42a;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 5px solid #77d42a;
+}
+
+footer nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer nav ul li {
+  display: inline;
+  margin-left: 20px;
+}
+
+footer nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}

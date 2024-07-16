@@ -1,0 +1,42 @@
+body {
+  background: #ba91b4;
+}
+.gradient-background {
+  background: linear-gradient(#22fd97, #853ae1, #e601ad);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.bg-body-tertiary {
+  background-color: #01b4c4 !important; /* Override with a light gray background without use od the
+   [important] we cant change */
+  color: #000000 !important; /* Change text color to dark gray */
+  /* Add any other styles you need */
+}
+
+.hairan {
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.icon-square {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.75rem;
+}
+
+.profile-img {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+}

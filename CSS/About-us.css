@@ -1,0 +1,157 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+/* Animated Background for About Section */
+#about {
+  background-color: #333; /* Initial background color */
+  animation: colorAnimation 60s infinite alternate; /* Animation properties */
+}
+
+/* Keyframes for Color Animation */
+@keyframes colorAnimation {
+  0% {
+    background-color: #333;
+  } /* Start color */
+  5% {
+    background-color: #ff6347;
+  } /* Tomato */
+  10% {
+    background-color: #ffc107;
+  } /* Amber */
+  15% {
+    background-color: #32cd32;
+  } /* Lime Green */
+  20% {
+    background-color: #1e90ff;
+  } /* Dodger Blue */
+  25% {
+    background-color: #ff69b4;
+  } /* Hot Pink */
+  30% {
+    background-color: #ff4500;
+  } /* Orange Red */
+  35% {
+    background-color: #adff2f;
+  } /* Green Yellow */
+  40% {
+    background-color: #4b0082;
+  } /* Indigo */
+  45% {
+    background-color: #ff1493;
+  } /* Deep Pink */
+  50% {
+    background-color: #00ced1;
+  } /* Dark Turquoise */
+  55% {
+    background-color: #7fff00;
+  } /* Chartreuse */
+  60% {
+    background-color: #8a2be2;
+  } /* Blue Violet */
+  65% {
+    background-color: #daa520;
+  } /* Golden Rod */
+  70% {
+    background-color: #ff8c00;
+  } /* Dark Orange */
+  75% {
+    background-color: #8b0000;
+  } /* Dark Red */
+  80% {
+    background-color: #2e8b57;
+  } /* Sea Green */
+  85% {
+    background-color: #9400d3;
+  } /* Dark Violet */
+  90% {
+    background-color: #20b2aa;
+  } /* Light Sea Green */
+  95% {
+    background-color: #ff00ff;
+  } /* Magenta */
+  100% {
+    background-color: #333;
+  } /* Back to Start color */
+}
+
+#about {
+  background: #f4f4f4;
+  padding: 50px 0;
+}
+
+#about h1 {
+  font-weight: bolder;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 48px;
+}
+
+#about p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  font-weight: bold;
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+.team {
+  display: flex;
+  justify-content: space-around;
+}
+
+.member {
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.member h2 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.member p {
+  color: #777;
+  font-size: 16px;
+}
+
+.member:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+footer p {
+  margin: 0;
+}
