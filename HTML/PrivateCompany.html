@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Private LTD Homepage</title>
+    <link rel="stylesheet" href="../CSS/PrivateComany.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Private LTD</h1>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="hero">
+      <div class="container">
+        <video autoplay muted loop id="video-background">
+          <source src="../Videos/herosectionprivateltds.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+          <p>Your hero section text goes here.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>
+          Private LTD is a leading firm in delivering quality solutions for all
+          your business needs. Our team of experts is dedicated to providing
+          innovative and efficient services to help your business thrive.
+        </p>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <h2>Our Services</h2>
+        <div class="service">
+          <h3>Web Development</h3>
+          <p>
+            We create stunning and responsive websites tailored to your business
+            needs.
+          </p>
+        </div>
+        <div class="service">
+          <h3>Mobile App Development</h3>
+          <p>
+            Our mobile apps are designed to provide seamless user experiences
+            across all devices.
+          </p>
+        </div>
+        <div class="service">
+          <h3>Digital Marketing</h3>
+          <p>
+            We offer comprehensive digital marketing services to boost your
+            online presence.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <div class="container">
+        <h2>Our Portfolio</h2>
+        <div class="gallery">
+          <img src="../Images\project1.png" alt="Project 1" />
+          <img src="../Images\project2.png" alt="Project 2" />
+          <img src="../Images\project3.png" alt="Project 3" />
+        </div>
+      </div>
+    </section>
+
+    <section id="team">
+      <div class="container">
+        <h2>Meet Our Team</h2>
+        <div class="team-member">
+          <img src="../Images\chancellor.jpg" alt="Member 1 Wesley J. Hall" />
+          <h3>John Doe</h3>
+          <p>CEO & Founder</p>
+        </div>
+        <div class="team-member">
+          <img src="../Images/JaneSmith.jpg" alt="Staff Member 2" />
+          <h3>Jane Smith</h3>
+          <p>Head of Development</p>
+        </div>
+        <div class="team-member">
+          <img src="../Images/Emily-Johnson.jpg" alt="Staff Member 3" />
+          <h3>Emily Johnson</h3>
+          <p>Marketing Manager</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <form>
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Private LTD. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      // JavaScript code for additional functionalities
+      document.addEventListener("DOMContentLoaded", (event) => {
+        console.log("Document is fully loaded and parsed");
+
+        // Example: Add a click event to log a message
+        document
+          .querySelector('button[type="submit"]')
+          .addEventListener("click", function (event) {
+            event.preventDefault();
+            console.log("Form submitted");
+          });
+      });
+    </script>
+  </body>
+</html>

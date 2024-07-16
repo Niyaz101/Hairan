@@ -1,0 +1,149 @@
+/* General Styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333; /* Fallback background color */
+  color: #fff;
+  overflow: hidden;
+}
+
+body,
+html {
+  background-color: #3b1d1d; /* Initial background color */
+  animation: colorAnimation 60s infinite alternate; /* Animation properties */
+}
+
+/* Keyframes for Color Animation */
+@keyframes colorAnimation {
+  0% {
+    background-color: #333;
+  } /* Start color */
+  5% {
+    background-color: #ff6347;
+  } /* Tomato */
+  10% {
+    background-color: #ffc107;
+  } /* Amber */
+  15% {
+    background-color: #32cd32;
+  } /* Lime Green */
+  20% {
+    background-color: #1e90ff;
+  } /* Dodger Blue */
+  25% {
+    background-color: #ff69b4;
+  } /* Hot Pink */
+  30% {
+    background-color: #5b200b;
+  } /* Orange Red */
+  35% {
+    background-color: #adff2f;
+  } /* Green Yellow */
+  40% {
+    background-color: #4b0082;
+  } /* Indigo */
+  45% {
+    background-color: #ff1493;
+  } /* Deep Pink */
+  50% {
+    background-color: #00ced1;
+  } /* Dark Turquoise */
+  55% {
+    background-color: #7fff00;
+  } /* Chartreuse */
+  60% {
+    background-color: #8a2be2;
+  } /* Blue Violet */
+  65% {
+    background-color: #daa520;
+  } /* Golden Rod */
+  70% {
+    background-color: #ff8c00;
+  } /* Dark Orange */
+  75% {
+    background-color: #8b0000;
+  } /* Dark Red */
+  80% {
+    background-color: #2e8b57;
+  } /* Sea Green */
+  85% {
+    background-color: #9400d3;
+  } /* Dark Violet */
+  90% {
+    background-color: #05864e;
+  } /* Light Sea Green */
+  95% {
+    background-color: #ff00ff;
+  } /* Magenta */
+  100% {
+    background-color: #333;
+  } /* Back to Start color */
+}
+
+/* Particle Background */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Login Container */
+.login-container {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+/* Input Group */
+.input-group {
+  margin-bottom: 15px;
+}
+
+/* Labels */
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Inputs */
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: #ffc107;
+  color: #333;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #e0a800;
+}
+
+/* Options */
+.options {
+  margin-top: 20px;
+}

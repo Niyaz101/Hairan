@@ -1,0 +1,131 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-image: repeating-linear-gradient(
+    45deg,
+    /* Angle of the gradient */ rgb(101, 148, 26) 0%,
+    /* Start color */ rgba(44, 105, 36, 0.5) 10%,
+    /* Mid color */ rgba(33, 153, 137, 0.25) 20% /* End color */
+  );
+}
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Header */
+header {
+  background: #333;
+  color: #fff;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: #77d42a 3px solid;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+header ul {
+  padding: 0;
+  list-style: none;
+}
+
+header li {
+  display: inline;
+  padding: 0 20px 0 20px;
+}
+
+header .logo {
+  float: left;
+}
+
+header nav {
+  float: right;
+}
+
+/* Hero Section */
+#hero {
+  background: url("../Images/hero.png") no-repeat center center/cover;
+  color: #5c1a1a;
+  height: 400px;
+  text-align: center;
+  padding-top: 100px;
+}
+
+#hero .btn {
+  display: inline-block;
+  color: #fff;
+  background: #77d42a;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* Services Section */
+#services {
+  padding: 20px 0;
+  text-align: center;
+  background-color: #f2f2f2; /* Light gray background */
+}
+
+#services .service {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #fff; /* White background for each service box */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#services h3 {
+  color: #333;
+}
+
+/* Testimonials Section */
+#testimonials {
+  padding: 20px 0;
+  background: #f4f4f4;
+}
+
+#testimonials .testimonial {
+  margin: 20px 0;
+  text-align: center;
+  font-style: italic;
+}
+
+#testimonials p:last-child {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  border-top: #77d42a 3px solid;
+}
+
+footer ul {
+  padding: 0;
+  list-style: none;
+}
+
+footer li {
+  display: inline;
+  padding: 0 20px 0 20px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
