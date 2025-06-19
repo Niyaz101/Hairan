@@ -1,0 +1,283 @@
+/* =================== niyazcv.css =================== */
+
+/* ========== Base Reset ========== */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Calibri, sans-serif;
+}
+
+body {
+  background-color: #fff8e1; /* Soft gold background */
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ========== Layout Container ========== */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* ========== Header ========== */
+.site-header {
+  background: linear-gradient(to right, #b76e00, #ffd54f);
+  padding: 2rem 1rem;
+  text-align: center;
+  color: white;
+  border-bottom: 4px solid #b76e00;
+}
+
+.site-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.5rem;
+}
+
+.site-nav {
+  margin-top: 1rem;
+}
+
+.site-nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  color: #2c2c2c;
+  text-decoration: underline;
+}
+
+/* ========== Section Styling ========== */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #b76e00;
+  border-left: 4px solid #b76e00;
+  padding-left: 1rem;
+}
+
+.resume-section,
+.portfolio-section,
+.contact-section,
+.about,
+.docs-section {
+  background-color: #fff;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.about {
+  display: flex;
+  align-items: center; /* vertically center */
+  gap: 2rem;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.about-photo img {
+  width: 300px; /* doubled from 180px */
+  height: 300px; /* equal height for perfect circle */
+  border-radius: 50%; /* circular shape */
+  object-fit: cover; /* fill the circle */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0; /* prevent shrinking */
+}
+
+.about-text {
+  font-size: 1.1rem;
+  color: #444;
+  max-width: 700px;
+  line-height: 1.5;
+}
+
+.about p,
+.resume-section p,
+.resume-section ul,
+.resume-section li,
+.contact-section p {
+  font-size: 1.05rem;
+  color: #444;
+}
+
+.contact-objective-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Optional: style each block */
+.contact-details,
+.objective {
+  /* padding can be added if needed */
+}
+
+.resume-section ul {
+  padding-left: 1.2rem;
+  list-style: disc;
+  margin-bottom: 1rem;
+}
+
+.resume-section h3 {
+  color: #b76e00;
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.resume-section strong {
+  display: block;
+  margin-top: 1rem;
+  color: #2c2c2c;
+}
+
+/* ========== Portfolio ========== */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.portfolio-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.portfolio-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* ========== Documents Section ========== */
+.docs-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #b76e00;
+  border-left: 4px solid #b76e00;
+  padding-left: 1rem;
+}
+
+.docs-list {
+  list-style: none;
+  padding: 0;
+}
+
+.docs-list li {
+  margin: 1rem 0;
+}
+
+.docs-list a {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #b76e00;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.docs-list a:hover {
+  color: #222;
+  text-decoration: underline;
+}
+
+/* ========== Footer ========== */
+.site-footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #b76e00;
+  color: #fff;
+  font-weight: 500;
+  border-top: 4px solid #ffd54f;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .site-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  .site-title {
+    font-size: 2.2rem;
+  }
+  .container {
+    padding: 1rem;
+  }
+  .about {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .about img {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+}
+
+/* ========== Print Styles ========== */
+@media print {
+  body {
+    background-color: white;
+    color: #000;
+  }
+
+  .site-header,
+  .site-footer,
+  .site-nav {
+    display: none;
+  }
+
+  .container {
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .resume-section,
+  .portfolio-section,
+  .contact-section,
+  .about,
+  .docs-section {
+    page-break-inside: avoid;
+    box-shadow: none;
+    border: none;
+  }
+
+  h2 {
+    color: #000;
+    border-left: none;
+  }
+
+  .portfolio-grid img {
+    page-break-inside: avoid;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 1in;
+  }
+}
+
+/* =================== END CSS =================== */

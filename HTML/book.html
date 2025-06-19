@@ -1,0 +1,117 @@
+<!-- ================== book.html ================== -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eBook Reader</title>
+    <link rel="stylesheet" href="../CSS/book.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Only one background-shapes container -->
+    <div class="background-shapes"></div>
+
+    <!-- Floating Info Block LEFT -->
+    <div class="ebook-info">
+      <h1 class="ebook-title">🌟 eBook Viewer</h1>
+      <p class="ebook-author"><strong>Author:</strong> Niyaz Hairan</p>
+      <p class="ebook-date"><strong>Published:</strong> June 2025</p>
+      <p class="ebook-description">
+        This beautifully structured eBook helps users learn every aspect of
+        Windows 11 with clear guidance and visuals.
+      </p>
+    </div>
+
+    <!-- Main Book Viewer -->
+    <div class="ebook-container">
+      <!-- IFRAME that will show the book -->
+      <div class="ebook-viewer" style="margin-top: 20px">
+        <iframe
+          id="ebookFrame"
+          src=""
+          width="100%"
+          height="800"
+          frameborder="0"
+          style="
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            background-color: white;
+          "
+          title="PDF Viewer"
+        ></iframe>
+      </div>
+    </div>
+    <!-- End of .ebook-container -->
+
+    <!-- Floating Side Buttons -->
+    <div class="ebook-side-buttons">
+      <a id="downloadBtn" href="#" class="btn btn-success">⬇️ Download PDF</a>
+      <a href="../HTML/eBookIndex.html" class="btn btn-outline-secondary"
+        >⬅️ Back to Home</a
+      >
+    </div>
+
+    <script>
+      // Load PDF and set download link
+      const params = new URLSearchParams(window.location.search);
+      const bookName = params.get("book") || "د کمپیوټر ښوونکۍ";
+      const decodedBook = decodeURIComponent(bookName);
+      const pdfPath = `../eBook/${decodedBook}.pdf`;
+
+      document.getElementById("ebookFrame").src = pdfPath + "#toolbar=0";
+      const downloadBtn = document.getElementById("downloadBtn");
+      downloadBtn.href = pdfPath;
+      downloadBtn.setAttribute("download", decodedBook + ".pdf");
+
+      // Dynamically create 500 floating shapes
+      const shapesContainer = document.querySelector(".background-shapes");
+      const shapesCount = 500; // Number of shapes
+      const shapeTypes = ["circle", "square", "triangle"];
+
+      for (let i = 0; i < shapesCount; i++) {
+        const shape = document.createElement("div");
+        shape.classList.add("shape");
+
+        // Random shape type
+        const randomType =
+          shapeTypes[Math.floor(Math.random() * shapeTypes.length)];
+        shape.classList.add(randomType);
+
+        // Random size between 10 and 50 px
+        let size = Math.floor(Math.random() * 40) + 10;
+
+        if (randomType === "triangle") {
+          shape.style.width = "0px";
+          shape.style.height = "0px";
+          shape.style.borderLeft = `${size / 2}px solid transparent`;
+          shape.style.borderRight = `${size / 2}px solid transparent`;
+          shape.style.borderBottom = `${(size * 1.7).toFixed(
+            0
+          )}px solid #ff9800`;
+          shape.style.background = "none";
+        } else {
+          shape.style.width = size + "px";
+          shape.style.height = size + "px";
+        }
+
+        // Random position inside viewport (vw, vh)
+        shape.style.top = Math.random() * 100 + "vh";
+        shape.style.left = Math.random() * 100 + "vw";
+
+        // Random animation duration 4s to 12s
+        shape.style.animationDuration =
+          (Math.random() * 8 + 4).toFixed(2) + "s";
+
+        // Random animation delay so they don't sync
+        shape.style.animationDelay = (Math.random() * 10).toFixed(2) + "s";
+
+        shapesContainer.appendChild(shape);
+      }
+    </script>
+  </body>
+</html>

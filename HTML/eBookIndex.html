@@ -1,0 +1,255 @@
+<!-- ================== ebookIndex.html ================== -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>📚 eBook Library</title>
+    <link rel="stylesheet" href="../CSS/book.css" />
+    <link rel="stylesheet" href="../CSS/ebookindex.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- ========== Bootstrap Header from Homepage ========== -->
+    <section class="header">
+      <header class="p-3 text-bg-dark">
+        <div class="container-fluid">
+          <div class="d-flex flex-nowrap align-items-center overflow-auto">
+            <!-- ✅ Navigation Links -->
+            <ul class="nav flex-nowrap me-auto">
+              <li>
+                <a href="../index.html" class="nav-link px-2 text-secondary"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="./Business.html" class="nav-link px-2 text-white"
+                  >Business</a
+                >
+              </li>
+              <li>
+                <a href="./Students.html" class="nav-link px-2 text-white"
+                  >Students</a
+                >
+              </li>
+              <li>
+                <a href="./UiUXdesign.html" class="nav-link px-2 text-white"
+                  >UI design</a
+                >
+              </li>
+              <li>
+                <a href="./University.html" class="nav-link px-2 text-white"
+                  >University</a
+                >
+              </li>
+              <li>
+                <a href="./databses.html" class="nav-link px-2 text-white"
+                  >Database</a
+                >
+              </li>
+              <li>
+                <a href="./MobileApp.html" class="nav-link px-2 text-white"
+                  >Mobile APPs</a
+                >
+              </li>
+              <li>
+                <a href="./qr.html" class="nav-link px-2 text-white"
+                  >Generate QR</a
+                >
+              </li>
+              <li>
+                <a href="./PrivateCompany.html" class="nav-link px-2 text-white"
+                  >Private Ltd</a
+                >
+              </li>
+              <li></li>
+
+              <li>
+                <a href="./niyaz-cv.html" class="nav-link px-2 text-white">
+                  Niyaz CV</a
+                >
+              </li>
+              <li>
+                <a href="./About-us.html" class="nav-link px-2 text-white"
+                  >About Us</a
+                >
+              </li>
+            </ul>
+
+            <!-- ✅ Search and Auth Buttons -->
+            <form class="me-3" role="search">
+              <input
+                type="search"
+                class="form-control form-control-dark text-bg-dark"
+                placeholder="Search..."
+                aria-label="Search"
+                style="min-width: 200px"
+              />
+            </form>
+
+            <a href="./Login.html" class="me-2">
+              <button type="button" class="btn btn-outline-light">Login</button>
+            </a>
+            <a href="./Sign-Up.html">
+              <button type="button" class="btn btn-warning">Sign-up</button>
+            </a>
+          </div>
+        </div>
+      </header>
+    </section>
+
+    <!-- ---------------------------------------------------------- -->
+
+    <div class="wave wave-top"></div>
+
+    <!-- ================== Fixed Header Content ================== -->
+    <div class="wave wave-top"></div>
+
+    <div class="ebook-header-overlay">
+      <h1 class="ebook-title">📘 eBook Library</h1>
+      <p class="ebook-description">
+        Explore 200 eBooks. Click to read or download.
+      </p>
+    </div>
+
+    <div class="ebook-index-container">
+      <div class="ebook-grid" id="ebookGrid"></div>
+    </div>
+
+    <div class="wave wave-bottom"></div>
+
+    <script>
+      //Step one.
+      // to use or add eBook just duplicate the object in the ebooks array
+      // and change the values accordingly.
+      // Make sure to URL encode the id if it contains special characters
+      // like spaces, Arabic characters, etc. using encodeURIComponent.
+      // For example, if the id is "د کمپیوټر ښوونکی", use encodeURIComponent("د کمپیوټر ښوونکی")
+      // Step two.
+      // Add the cover image and PDF file in the eBook folder.
+      // Make sure the file names match the ones in the ebooks array.
+
+      const ebooks = [
+        {
+          id: "%D8%AF%20%DA%A9%D9%85%D9%BE%DB%8C%D9%88%D9%BC%D8%B1%20%DA%9A%D9%88%D9%88%D9%86%DA%A9%DB%8D", // URL encoded
+          title: "د کمپیوټر ښوونکی",
+          author: "Niyaz Hairan",
+          genre: "Education",
+          downloads: 1245,
+          viewed: 934,
+          summary: "Learn Windows 11 in native Pashto.",
+          pdfFile: "د کمپیوټر ښوونکۍ.pdf",
+          coverImage: "../Images/Cover Photo.png",
+        },
+        {
+          id: encodeURIComponent("Windows Shortcuts"), // use encodeURIComponent
+          title: "Windows Shortcuts",
+          author: "Niyaz Hairan",
+          genre: "Technology",
+          downloads: 980,
+          viewed: 1023,
+          summary: "An in-depth guide to Google services in Pashto.",
+          pdfFile: "Windows Shortcuts.pdf",
+          coverImage: "../Images/Windows 11 Learning.png",
+        },
+        {
+          id: encodeURIComponent("Windows Shortcuts"), // use encodeURIComponent
+          title: "Windows Shortcuts",
+          author: "Niyaz Hairan",
+          genre: "Technology",
+          downloads: 980,
+          viewed: 1023,
+          summary: "An in-depth guide to Google services in Pashto.",
+          pdfFile: "Windows Shortcuts.pdf",
+          coverImage: "../Images/Windows 11 Learning.png",
+        },
+        {
+          id: encodeURIComponent("Windows Shortcuts"), // use encodeURIComponent
+          title: "Windows Shortcuts",
+          author: "Niyaz Hairan",
+          genre: "Technology",
+          downloads: 980,
+          viewed: 1023,
+          summary: "An in-depth guide to Google services in Pashto.",
+          pdfFile: "Windows Shortcuts.pdf",
+          coverImage: "../Images/Windows 11 Learning.png",
+        },
+        {
+          id: encodeURIComponent("Windows Shortcuts"), // use encodeURIComponent
+          title: "Windows Shortcuts",
+          author: "Niyaz Hairan",
+          genre: "Technology",
+          downloads: 980,
+          viewed: 1023,
+          summary: "An in-depth guide to Google services in Pashto.",
+          pdfFile: "Windows Shortcuts.pdf",
+          coverImage: "../Images/Windows 11 Learning.png",
+        },
+        {
+          id: encodeURIComponent("Windows Shortcuts"), // use encodeURIComponent
+          title: "Windows Shortcuts",
+          author: "Niyaz Hairan",
+          genre: "Technology",
+          downloads: 980,
+          viewed: 1023,
+          summary: "An in-depth guide to Google services in Pashto.",
+          pdfFile: "Windows Shortcuts.pdf",
+          coverImage: "../Images/Windows 11 Learning.png",
+        },
+        {
+          id: encodeURIComponent("Windows Shortcuts"), // use encodeURIComponent
+          title: "Windows Shortcuts",
+          author: "Niyaz Hairan",
+          genre: "Technology",
+          downloads: 980,
+          viewed: 1023,
+          summary: "An in-depth guide to Google services in Pashto.",
+          pdfFile: "Windows Shortcuts.pdf",
+          coverImage: "../Images/Windows 11 Learning.png",
+        },
+        {
+          id: encodeURIComponent("Windows Shortcuts"), // use encodeURIComponent
+          title: "Windows Shortcuts",
+          author: "Niyaz Hairan",
+          genre: "Technology",
+          downloads: 980,
+          viewed: 1023,
+          summary: "An in-depth guide to Google services in Pashto.",
+          pdfFile: "Windows Shortcuts.pdf",
+          coverImage: "../Images/Windows 11 Learning.png",
+        },
+        // add more books here
+      ];
+
+      const grid = document.getElementById("ebookGrid");
+      ebooks.forEach((book) => {
+        const card = document.createElement("div");
+        card.className = "ebook-card";
+
+        card.innerHTML = `
+        <img src="${book.coverImage}" alt="${book.title}">
+
+        <h5>${book.title}</h5>
+        <div class="ebook-meta">
+          <p><strong>Author:</strong> ${book.author}</p>
+          <p><strong>Genre:</strong> ${book.genre}</p>
+          <p><strong>Downloads:</strong> ${book.downloads}</p>
+          <p><strong>Viewed:</strong> ${book.viewed}</p>
+          <p><strong>Summary:</strong> ${book.summary}</p>
+        </div>
+        <div class="ebook-buttons">
+          <a href="../HTML/book.html?book=${book.id}" class="btn btn-sm btn-primary">📖 Read</a>
+          <a href="../eBook/${book.pdfFile}" download class="btn btn-sm btn-success">⬇️ Download</a>
+        </div>
+      `;
+
+        grid.appendChild(card);
+      });
+    </script>
+    <div class="wave wave-bottom"></div>
+  </body>
+</html>

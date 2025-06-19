@@ -1,0 +1,256 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Calibri, sans-serif;
+  background: linear-gradient(to bottom, #a39fa0, #aacbeb);
+
+  overflow-x: hidden;
+  position: relative;
+}
+
+.ebook-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 90%;
+  max-width: 900px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Floating Info Section on the Left */
+/* Stylish Floating Info Panel on the Left */
+.ebook-info {
+  position: fixed;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  z-index: 100;
+  max-width: 260px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 25px 30px;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  font-family: Calibri, sans-serif;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #0d47a1;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+/* Title Styling */
+.ebook-info .ebook-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #003366;
+  margin-bottom: 12px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Text paragraphs */
+.ebook-info p {
+  margin: 8px 0;
+  font-size: 15px;
+  color: #1a2d5a;
+  line-height: 1.5;
+}
+
+/* Add subtle separator line */
+.ebook-info p + p {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 8px;
+}
+
+/* Hover Effect */
+.ebook-info:hover {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  transform: translateY(-50%) scale(1.02);
+}
+
+/* Make responsive for smaller devices */
+@media screen and (max-width: 768px) {
+  .ebook-container {
+    padding: 15px;
+    width: 95%;
+    height: auto;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .ebook-viewer iframe {
+    height: 400px;
+  }
+
+  .ebook-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .ebook-container {
+    padding: 10px;
+    width: 98%;
+    border-radius: 12px;
+  }
+
+  .ebook-viewer iframe {
+    height: 300px;
+  }
+
+  .ebook-title {
+    font-size: 24px;
+  }
+
+  .ebook-author,
+  .ebook-date,
+  .ebook-description {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .ebook-info {
+    position: static;
+    transform: none;
+    max-width: 100%;
+    margin: 20px auto;
+    text-align: center;
+  }
+}
+
+/* Text Styling */
+.ebook-title {
+  font-size: 32px;
+  color: #0d47a1;
+}
+
+.ebook-author,
+.ebook-date,
+.ebook-description {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.ebook-viewer iframe {
+  width: 100%;
+  height: 500px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* .ebook-buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+} */
+
+/* Buttons floating on the right side of the viewport */
+.ebook-side-buttons {
+  position: fixed;
+  top: 50%;
+  right: 20px; /* Change to 'left: 20px;' to move to left side */
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 50; /* Higher than wave/background layers */
+}
+
+/* Individual button styles */
+.ebook-side-buttons a {
+  padding: 10px 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+/* Hover effect */
+.ebook-side-buttons a:hover {
+  transform: scale(1.05);
+}
+
+/* SVG Waves */
+.wave {
+  position: fixed; /* change absolute to fixed */
+  width: 100%;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  left: 0; /* ensure it's fixed relative to viewport */
+}
+
+/* no change here, just keep top and bottom positions */
+.wave-top {
+  top: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' viewBox='0 0 1440 320' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%231976d2' fill-opacity='0.3' d='M0,64L48,90.7C96,117,192,171,288,192C384,213,480,203,576,186.7C672,171,768,149,864,160C960,171,1056,213,1152,202.7C1248,192,1344,128,1392,96L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z'/%3E%3C/svg%3E");
+}
+
+.wave-bottom {
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' viewBox='0 0 1440 320' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%230d47a1' fill-opacity='0.2' d='M0,96L60,128C120,160,240,224,360,229.3C480,235,600,181,720,176C840,171,960,213,1080,202.7C1200,192,1320,128,1380,96L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z'/%3E%3C/svg%3E");
+}
+
+.background-shapes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.shape {
+  position: absolute;
+  opacity: 0.15;
+  animation: floatShape ease-in-out infinite;
+}
+
+/* Shape styles */
+.circle {
+  border-radius: 50%;
+  background: #1976d2;
+}
+
+.square {
+  background: #4caf50;
+}
+
+.triangle {
+  width: 0 !important;
+  height: 0 !important;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 17px solid #ff9800;
+  background: none !important;
+}
+
+/* Animation */
+@keyframes floatShape {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-20px) rotate(45deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
