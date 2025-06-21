@@ -17,6 +17,7 @@ body {
     background-position: 0% 50%;
   }
 }
+<<<<<<< HEAD
 
 /* ========== Header Section (Fixed Top) ========== */
 .header {
@@ -26,6 +27,8 @@ body {
   width: 100%;
   z-index: 1001;
 }
+=======
+>>>>>>> ccc2c4e5d9fbf95d0fdf226abf272a20b1cb887b
 .bg-body-tertiary {
   background-color: #01b4c4 !important; /* Override with a light gray background without use od the
    [important] we cant change */
